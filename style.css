@@ -1,0 +1,159 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Hero area styling */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+   /* background-image: url(images/back-image.png);*/
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding: 10px 10%;
+    position: relative;
+}
+
+/* Navigation styling */
+nav {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    width: 140px;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 400;
+}
+.login-btn {
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+    font-weight: 400;
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #df4881, #40E0D0);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+}
+.btn:hover {
+    border-top-right-radius: 30px;
+}
+
+/* Content styling */
+.content {
+    margin-top: 10%;
+    max-width: 600px;
+}
+.content h1 {
+    font-size: 70px;
+    color: #222;
+}
+.content p {
+    margin: 10px 0 30px;
+    color: #333;
+    animation-delay: 0.5s;
+}
+.content .btn {
+    padding: 15px 80px;
+    font-size: 16px;
+    animation-delay: 1s;
+}
+
+/* Default feature image style (used for hero areas or other absolute positioned images) */
+.feature-img {
+    width: 350px;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+
+/* Consolidate duplicate animation-delay rules */
+.feature-img.anim,
+.feature-img.anims {
+    animation-delay: 1.5s;
+}
+
+/* Animation effect */
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Main layout for sections */
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.onethird {
+    flex: 0 0 calc(33.33% - 20px);  /* Each takes about one-third of the row with margin consideration */
+    margin: 10px;
+}
+
+/* 
+   Override for feature images inside main sections.
+   This rule resets the absolute positioning so that the images flow normally within each .onethird container.
+*/
+main .onethird .feature-img {
+    position: static; /* Remove absolute positioning */
+    width: 100%;      /* Let it fill the container responsively */
+    max-width: 350px; /* Maintain a maximum width */
+    display: block;   /* Treat as block-level for margins */
+    margin: 0 auto;   /* Center the image if you wish */
+}
+
+/* Optional: Ensure the container hides overflow so the scaling image isn’t clipped */
+.onethird {
+    overflow: hidden;
+    border-radius: 10px; /* Adds a subtle rounded corner for a card feel */
+}
+
+/* Transition effects for the images */
+main .onethird .feature-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effects on the image card */
+.onethird:hover .feature-img {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+}
+
+
+
+
+
+
+    
+   
