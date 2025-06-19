@@ -10,7 +10,6 @@
 .hero {
     width: 100%;
     min-height: 100vh;
-   /*background-image: url(images/back-image.png);*/
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -25,19 +24,23 @@ nav {
     align-items: center;
     justify-content: space-between;
 }
+
 .logo {
     width: 140px;
 }
+
 nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 15px;
 }
+
 nav ul li a {
     color: #333;
     text-decoration: none;
     font-weight: 400;
 }
+
 .login-btn {
     text-decoration: none;
     color: #333;
@@ -57,6 +60,7 @@ nav ul li a {
     border-top-right-radius: 0;
     transition: 0.5s;
 }
+
 .btn:hover {
     border-top-right-radius: 30px;
 }
@@ -66,27 +70,28 @@ nav ul li a {
     margin-top: 10%;
     max-width: 600px;
 }
+
 .content h1 {
     font-size: 70px;
     color: #222;
 }
+
 .content p {
     margin: 10px 0 30px;
     color: #333;
     animation-delay: 0.5s;
 }
+
 .content .btn {
     padding: 15px 80px;
     font-size: 16px;
     animation-delay: 1s;
 }
 
-/* Default feature image style (used for hero areas or other absolute positioned images) */
 .feature-img {
-    width: 350px;
-    position: absolute;
-    bottom: 0;
-    right: 10%;
+    width: 100%;
+    height: auto;
+    object-fit: 50%;
 }
 
 /* Consolidate duplicate animation-delay rules */
@@ -101,6 +106,7 @@ nav ul li a {
     transform: translateY(30px);
     animation: moveup 0.5s linear forwards;
 }
+
 @keyframes moveup {
     100% {
         opacity: 1;
@@ -124,6 +130,7 @@ main {
    Override for feature images inside main sections.
    This rule resets the absolute positioning so that the images flow normally within each .onethird container.
 */
+
 main .onethird .feature-img {
     position: static; /* Remove absolute positioning */
     width: 100%;      /* Let it fill the container responsively */
